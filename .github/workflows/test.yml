@@ -38,10 +38,10 @@ jobs:
         run: jlpm --immutable
 
       - name: Lint the JS
-        run: jlpm lint:js:check
+        run: jlpm lint:js
 
       - name: Lint the Python
-        run: jlpm lint:py:check
+        run: jlpm lint:py
 
       - name: Build the JS extension
         run: jlpm build
