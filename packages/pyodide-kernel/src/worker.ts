@@ -122,6 +122,8 @@ export class PyodideRemoteKernel {
     this._stderr_stream = globals.get('pyodide_kernel').stderr_stream.copy();
     this._interpreter = this._kernel.interpreter.copy();
     this._interpreter.send_comm = this.sendComm.bind(this);
+    
+    await this._pyodide.runPythonAsync("aaa=100");
   }
 
   /**
